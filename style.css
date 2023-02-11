@@ -45,10 +45,98 @@ body {
   text-align: left;
 }
 
+.adjust-button {
+  width: 16px;
+  height: 16px;
+  border: 1px solid;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 4px;
+}
+
+.plus {
+  font-size: 14px;
+}
+
+.quantity {
+  font-size: 14px;
+  border-style: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.adjust-quantities {
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.subtotal-num {
+  margin: auto
+}
+
 .menu-order-button {
   font-size: 15px;
   background-color: #84AFF187;
   border-radius: 12px;
   width: 69px;
   height: 27px;
+}
+
+.clear-all-button {
+  font-size: 15px;
+  background-color: rgba(174, 180, 188, 0.53);
+  border-radius: 12px;
+  width: 93px;
+  height: 27px;
+}
+
+.popup-container {
+  position: relative;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: none;
+}
+
+.popup {
+  width: 30%;
+  height: 15%;
+  background: #F28C28;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  border-radius: 10px;
+}
+
+.popup-description, .popup-orders {
+  text-align: center;
+  color: white;
+  margin: auto;
+  padding-top: 5%;
+}
+
+.close-container {
+  padding-top: 10%;
+  display: flex;
+  justify-content: center;
+}
+
+.close-confirmation {
+  background-color: #F2D2BD;
+  border-radius: 12px;
+  width: 69px;
+  height: 27px;
+  text-align: center;
+  margin: auto;
+  border: 1px solid;
 }
