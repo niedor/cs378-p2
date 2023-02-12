@@ -107,7 +107,7 @@ body {
 
 .popup {
   width: 30%;
-  height: 30%;
+  height: 180px;
   background: #F28C28;
   position: absolute;
   top: 0;
