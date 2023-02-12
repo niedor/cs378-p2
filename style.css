@@ -103,7 +103,6 @@ body {
   bottom: 0;
   left: 0;
   display: none;
-  margin: 15px;
 }
 
 .popup {
@@ -120,7 +119,7 @@ body {
 }
 
 .popup-description, .popup-orders {
-  font-size: 80%;
+  font-size: 100%;
   text-align: center;
   color: white;
   margin: auto;
@@ -128,18 +127,22 @@ body {
 }
 
 .close-container {
-  padding-top: 80%;
   display: flex;
   justify-content: center;
+  position: absolute;
+  top: 75%;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .close-confirmation {
   background-color: #F2D2BD;
   border-radius: 12px;
-  width: 50%;
+  width: 90px;
   height: 30px;
   text-align: center;
   margin: auto;
   border: 1px solid;
-  font-size: 90%;
+  position: absolute;
 }
