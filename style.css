@@ -103,11 +103,12 @@ body {
   bottom: 0;
   left: 0;
   display: none;
+  margin: 15px;
 }
 
 .popup {
   width: 30%;
-  height: 15%;
+  height: 30%;
   background: #F28C28;
   position: absolute;
   top: 0;
@@ -119,6 +120,7 @@ body {
 }
 
 .popup-description, .popup-orders {
+  font-size: 80%;
   text-align: center;
   color: white;
   margin: auto;
@@ -126,7 +128,7 @@ body {
 }
 
 .close-container {
-  padding-top: 10%;
+  padding-top: 80%;
   display: flex;
   justify-content: center;
 }
@@ -134,9 +136,10 @@ body {
 .close-confirmation {
   background-color: #F2D2BD;
   border-radius: 12px;
-  width: 69px;
-  height: 27px;
+  width: 50%;
+  height: 30px;
   text-align: center;
   margin: auto;
   border: 1px solid;
+  font-size: 90%;
 }

@@ -42,7 +42,7 @@
               <button id="minus-mac" class="adjust-button" onclick="decrementQuantity('minus-mac', 'item-quantity-mac')">-</button>
             </div>
             <div class="col-1">
-              <input id="item-quantity-mac" class="quantity" type="number" value="0" oninput="updateSubtotal()"/>
+              <input id="item-quantity-mac" class="quantity" type="number" value="0" />
             </div>
             <div class="col-1">
               <button id="plus-mac" class="adjust-button plus" onclick="incrementQuantity('plus-mac', 'item-quantity-mac')">+</button>
@@ -69,7 +69,7 @@
               <button id="minus-pasta" class="adjust-button" onclick="decrementQuantity('minus-pasta', 'item-quantity-pasta')">-</button>
             </div>
             <div class="col-1">
-              <input id="item-quantity-pasta" class="quantity" type="number" value="0" oninput="updateSubtotal()"/>
+              <input id="item-quantity-pasta" class="quantity" type="number" value="0" />
             </div>
             <div class="col-1">
               <button id="plus-pasta" class="adjust-button plus" onclick="incrementQuantity('plus-pasta', 'item-quantity-pasta')">+</button>
@@ -96,7 +96,7 @@
               <button id="minus-tacos" class="adjust-button" onclick="decrementQuantity('minus-tacos', 'item-quantity-tacos')">-</button>
             </div>
             <div class="col-1">
-              <input id="item-quantity-tacos" class="quantity" type="number" value="0" oninput="updateSubtotal()" />
+              <input id="item-quantity-tacos" class="quantity" type="number" value="0" />
             </div>
             <div class="col-1">
               <button id="plus-tacos" class="adjust-button plus" onclick="incrementQuantity('plus-tacos', 'item-quantity-tacos')">+</button>
@@ -123,7 +123,7 @@
               <button id="minus-ench" class="adjust-button" onclick="decrementQuantity('minus-ench', 'item-quantity-ench')">-</button>
             </div>
             <div class="col-1">
-              <input id="item-quantity-ench" class="quantity" type="number" value="0" oninput="updateSubtotal()"/>
+              <input id="item-quantity-ench" class="quantity" type="number" value="0" />
             </div>
             <div class="col-1">
               <button id="plus-ench" class="adjust-button plus" onclick="incrementQuantity('plus-ench', 'item-quantity-ench')">+</button>
@@ -149,7 +149,7 @@
 
       <div id="popup-container" class="popup-container">
         <div class="popup">
-          <p class="popup-description">Your order has been placed!</p>
+          <p id="popup-description" class="popup-description">Whoops..</p>
           <p id="order" class="popup-orders">No items in cart</p>
           <div class="close-container">
             <button class="close-confirmation" onclick="closePopup()">OK</button>

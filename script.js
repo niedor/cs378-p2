@@ -7,6 +7,7 @@ function decrementQuantity(id, input) {
     if (quantityField.value != 0) {
         quantityField.value = currentValue - 1;
     }
+    updateSubtotal();
 }
 
 function incrementQuantity(id, input) {
@@ -15,17 +16,15 @@ function incrementQuantity(id, input) {
 
     const currentValue = Number(quantityField.value) || 0;
     quantityField.value = currentValue + 1;
+    updateSubtotal();
 }
 
 function updateSubtotal() {
-    console.log("I got into updateSubtotal()");
-    console.log("Innerhtml: " + document.getElementById("subtotal-val").innerHTML);
-    
     let value = 0;
-    value += document.getElementById("item-quantity-mac").value * 5;
-    value += document.getElementById("item-quantity-pasta").value * 5;
-    value += document.getElementById("item-quantity-tacos").value * 8;
-    value += document.getElementById("item-quantity-ench").value * 10;
+    value += Number(document.getElementById("item-quantity-mac").value) * 5;
+    value += Number(document.getElementById("item-quantity-pasta").value) * 5;
+    value += Number(document.getElementById("item-quantity-tacos").value) * 8;
+    value += Number(document.getElementById("item-quantity-ench").value) * 10;
 
     document.getElementById("subtotal-val").innerHTML = "$" + value;
 }
@@ -35,16 +34,46 @@ function clearAll() {
     document.getElementById("item-quantity-pasta").value = 0;
     document.getElementById("item-quantity-tacos").value = 0;
     document.getElementById("item-quantity-ench").value = 0;
+
+    document.getElementById("subtotal-val").innerHTML = "$0";
+    document.getElementById("order").innerHTML = "No items in cart";
+    document.getElementById("popup-description").innerHTML = "Whoops..";
+
+}
+
+function updateOrderList() {
+    macQuantity = Number(document.getElementById("item-quantity-mac").value);
+    pastaQuantity = Number(document.getElementById("item-quantity-pasta").value);
+    tacoQuantity = Number(document.getElementById("item-quantity-tacos").value);
+    enchQuantity = Number(document.getElementById("item-quantity-ench").value);
+
+    if (macQuantity || pastaQuantity || tacoQuantity || enchQuantity) {
+        document.getElementById("popup-description").innerHTML = "Your order has been placed!";
+
+        var elem = "";
+        if (macQuantity) {
+            elem += `${macQuantity} mac & cheese \n`
+        }
+        
+        if (pastaQuantity) {
+            elem += `${pastaQuantity} pasta \n`
+        }
+
+        if (tacoQuantity) {
+            elem += `${tacoQuantity} taco \n`
+        }
+
+        if (enchQuantity) {
+            elem += `${enchQuantity} enchilada`
+        }
+
+        document.getElementById("order").innerHTML = elem;
+    }
 }
 
 function openPopup() {
+    updateOrderList();
     document.getElementById("popup-container").style.display = "block";
-
-    const orderInfo = document.getElementById("order");
-    const subtotal = document.getElementById("subtotal-val").innerHTML;
-    // if (subtotal != "$0") {
-    //     // return $('<p>'>).addClass('order-list')
-    // }
 }
 
 function closePopup() {
