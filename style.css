@@ -118,7 +118,7 @@ body {
 
 .popup {
   width: 40%;
-  height: 180px;
+  height: 250px;
   background: #F28C28;
   position: absolute;
   top: 0;
@@ -142,7 +142,7 @@ body {
   display: flex;
   justify-content: center;
   position: absolute;
-  top: 75%;
+  top: 80%;
   right: 0;
   bottom: 0;
   left: 0;
