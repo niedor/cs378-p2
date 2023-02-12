@@ -118,7 +118,7 @@ body {
 }
 
 .popup {
-  width: 30%;
+  width: 40%;
   height: 180px;
   background: #F28C28;
   position: absolute;
@@ -128,6 +128,7 @@ body {
   left: 0;
   margin: auto;
   border-radius: 10px;
+  padding: 5px;
 }
 
 .popup-description, .popup-orders {
